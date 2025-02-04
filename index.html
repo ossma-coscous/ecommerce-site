@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fine Jewelry</title>
+
+    <!-- Font Links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section Start -->
+      <header class="header">
+        <div class="logo">FJ</div>
+        <div class="header-links-container">
+          <nav class="header-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">About us</a>
+          </nav>
+          <a href="#" class="btn">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </header>
+      <!-- Header Section End -->
+
+      <!-- Landing Page Section Start -->
+      <section class="landing-page"> 
+        <div class="landing-page-left">
+          <h1>Beautiful, masterful design never goes out of fashion.</h1>
+          <div class="actions">
+            <a href="#" class="btn">Contact</a>
+            <a href="#" class="gallery-link">Gallery →</a>
+          </div>
+        </div>
+        <div class="landing-page-right">
+          <img
+            src="./Fine-Jewelry-Website-Community-–-Figma-02-04-2025_04_37_PM.png"
+            alt="Jewelry Image"
+          />
+        </div>
+      </section>
+      <!-- Landing Page Section End -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // Toggle mobile menu
+      function toggleMenu() {
+        const menu = document.querySelector(".header-links");
+        menu.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.querySelector(".header-links");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+          menu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
